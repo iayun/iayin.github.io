@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="教程," />
+  <meta name="keywords" content="JDK,Oracle,PLSQL,Weblogic,Tomcat,J2EE," />
 
 
 
@@ -90,18 +90,36 @@
 
 
 
-<meta name="description" content="众生皆苦，还好我甜！">
-<meta name="keywords" content="教程">
+<meta name="description" content="前言记录一下搭建开发环境的常用步骤，虽然网上也有很多更详细的教程，但是不够全面，要去找很多才能搭建成功，收藏的链接也会失效，也不保证我的教程适用于所有人，仅供参考。以后也许还会不断的完善这份教程。">
+<meta name="keywords" content="JDK,Oracle,PLSQL,Weblogic,Tomcat,J2EE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="J2EE从零搭建开发环境">
 <meta property="og:url" content="http://iayun.vip/2018/10/08/J2EE从零搭建开发环境/index.html">
 <meta property="og:site_name" content="闲云逐浪">
-<meta property="og:description" content="众生皆苦，还好我甜！">
+<meta property="og:description" content="前言记录一下搭建开发环境的常用步骤，虽然网上也有很多更详细的教程，但是不够全面，要去找很多才能搭建成功，收藏的链接也会失效，也不保证我的教程适用于所有人，仅供参考。以后也许还会不断的完善这份教程。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-12T11:07:41.446Z">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%831.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%835.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%836.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%837.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%838.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%839.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8310.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8311.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8312.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8313.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8314.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8315.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8316.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8317.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%832.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%833.png">
+<meta property="og:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%834.png">
+<meta property="og:updated_time" content="2018-10-17T12:58:15.043Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="J2EE从零搭建开发环境">
-<meta name="twitter:description" content="众生皆苦，还好我甜！">
+<meta name="twitter:description" content="前言记录一下搭建开发环境的常用步骤，虽然网上也有很多更详细的教程，但是不够全面，要去找很多才能搭建成功，收藏的链接也会失效，也不保证我的教程适用于所有人，仅供参考。以后也许还会不断的完善这份教程。">
+<meta name="twitter:image" content="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%831.png">
 
 
 
@@ -111,7 +129,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"right","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -354,19 +372,46 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/08/J2EE从零搭建开发环境/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/10/08/J2EE从零搭建开发环境/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
           
           
 
-          
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
-            </span>
           
 
           
@@ -380,7 +425,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  346
                 </span>
               
 
@@ -417,7 +462,42 @@
       
 
       
-        
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>记录一下搭建开发环境的常用步骤，虽然网上也有很多更详细的教程，但是不够全面，要去找很多才能搭建成功，收藏的链接也会失效，也不保证我的教程适用于所有人，仅供参考。以后也许还会不断的完善这份教程。<br><a id="more"></a></p>
+<h3 id="1-1安装JDK"><a href="#1-1安装JDK" class="headerlink" title="1.1安装JDK"></a>1.1安装JDK</h3><p>Oracle JDK8<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">官网下载地址</a>，其他的版本也在里面，下载首先注册一个Oracle账号。</p>
+<h3 id="1-2配置环境变量"><a href="#1-2配置环境变量" class="headerlink" title="1.2配置环境变量"></a>1.2配置环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME       Program\JDK\jdk1.6.0_10</span><br><span class="line">Path            ;%JAVA_HOME%\bin;</span><br><span class="line">CLASSPATH       .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar</span><br></pre></td></tr></table></figure>
+<p>也可以直接输入绝对路径，但建议使用%JAVA_HOME%的方式。至此JDK 的配置也完成，打开一个命令行窗口，键入set classpath 与set java_home应该可以看到正确的配置信息。<br>同时，输入</p>
+<blockquote>
+<p>java -version</p>
+</blockquote>
+<p>看系统能否找到JAVA 的编译器。显示下图所示，代表配置成功<br><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%831.png" alt=""></p>
+<h3 id="2-1安装weblogic"><a href="#2-1安装weblogic" class="headerlink" title="2.1安装weblogic"></a>2.1安装weblogic</h3><p>安装Weblogic时，有最低JDK版本的要求，最新版本的Weblogic12.2.1.3服务器要求必须是JDK8及以上。<br>点击安装，可能防火墙会阻挡下，允许通过就行</p>
+<p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%835.png" alt=""></p>
+<p>点击下一步</p>
+<p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%836.png" alt=""></p>
+<p>下一步</p>
+<p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%837.png" alt=""></p>
+<p>下一步</p>
+<p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%838.png" alt="8"></p>
+<p>下一步</p>
+<p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%839.png" alt=""></p>
+<p>下一步</p>
+<p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8310.png" alt=""></p>
+<p>下一步</p>
+<p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8311.png" alt="11"></p>
+<p>下一步</p>
+<p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8312.png" alt=""></p>
+<p>下一步</p>
+<p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8313.png" alt=""></p>
+<p>下一步</p>
+<p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8314.png" alt=""></p>
+<p>下一步</p>
+<p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8315.png" alt=""></p>
+<p>等待安装完成</p>
+<p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8316.png" alt="16"></p>
+<h3 id="3-1安装SVN客户端"><a href="#3-1安装SVN客户端" class="headerlink" title="3.1安装SVN客户端"></a>3.1安装SVN客户端</h3><h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8317.png" alt=""></h2><p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%832.png" alt=""><br><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%833.png" alt=""></p>
+<h2 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%834.png" alt=""></h2><p>下一步<br>下一步</p>
+<p><a href="https://portal.qiniu.com/signup?code=3lplk65p4i89e" target="_blank" rel="noopener">七牛云邀请链接</a></p>
+
       
     </div>
     
@@ -445,7 +525,17 @@
       
         <div class="post-tags">
           
-            <a href="/tags/教程/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+            <a href="/tags/JDK/" rel="tag"><i class="fa fa-tag"></i> JDK</a>
+          
+            <a href="/tags/Oracle/" rel="tag"><i class="fa fa-tag"></i> Oracle</a>
+          
+            <a href="/tags/PLSQL/" rel="tag"><i class="fa fa-tag"></i> PLSQL</a>
+          
+            <a href="/tags/Weblogic/" rel="tag"><i class="fa fa-tag"></i> Weblogic</a>
+          
+            <a href="/tags/Tomcat/" rel="tag"><i class="fa fa-tag"></i> Tomcat</a>
+          
+            <a href="/tags/J2EE/" rel="tag"><i class="fa fa-tag"></i> J2EE</a>
           
         </div>
       
@@ -467,6 +557,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/15/测试/" rel="prev" title="测试">
+                测试 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -522,6 +616,13 @@ var jiathis_config={
           
 
   
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
 
 
 
@@ -545,8 +646,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -565,12 +675,21 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
             
 
             
@@ -578,12 +697,23 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
             
 			
+			
+				<script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+				<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+				<div class="widget-wrap">
+					<h3 class="widget-title">Tag Cloud</h3>
+					<div id="myCanvasContainer" class="widget tagcloud">
+						<canvas width="250" height="250" id="resCanvas" style="width=100%">
+							<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/J2EE/">J2EE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDK/">JDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PLSQL/">PLSQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weblogic/">Weblogic</a><span class="tag-list-count">1</span></li></ul>
+						</canvas>
+					</div>
+				</div>
 			
 
           </nav>
@@ -610,6 +740,22 @@ var jiathis_config={
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1安装JDK"><span class="nav-number">1.1.</span> <span class="nav-text">1.1安装JDK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2配置环境变量"><span class="nav-number">1.2.</span> <span class="nav-text">1.2配置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1安装weblogic"><span class="nav-number">1.3.</span> <span class="nav-text">2.1安装weblogic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1安装SVN客户端"><span class="nav-number">1.4.</span> <span class="nav-text">3.1安装SVN客户端</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-1"><span class="nav-number">3.</span> <span class="nav-text"></span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -639,16 +785,19 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">73</span>
+    <span title="Site words total count">419</span>
   
 </div>
 
 
   <div class="powered-by">
     <i class="fa fa-user-md"></i>
-	<span id="busuanzi_container_site_pv">
-    本站总访问量: <span id="busuanzi_value_site_pv"></span>次
+	<span id="busuanzi_container_site_uv">
+    本站总访问量: <span id="busuanzi_value_site_uv"></span>
 	</span>
+  </div>
+  <div style="width:300px;margin:0 auto; padding:20px 0;">
+		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030302001097" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="http://pgoai9ddk.bkt.clouddn.com/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">粤公网安备 44030302001097号</p></a>
   </div>
 
 
@@ -657,19 +806,7 @@ var jiathis_config={
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
 
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
   
 </div>
 
@@ -820,6 +957,43 @@ var jiathis_config={
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: '',
+            repo: '',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '992a80193890b06e775e901bab3bd6cf9ef80a1a',
+            
+                client_id: '2c85fa8d9a328d815308'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 
@@ -1180,7 +1354,7 @@ var jiathis_config={
 
   
 
-  <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script>
+  
   
   
      <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 

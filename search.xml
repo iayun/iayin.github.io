@@ -3,17 +3,44 @@
   
     
     <entry>
-      <title>J2EE从零搭建开发环境</title>
-      <link href="/2018/10/08/J2EE%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-      <url>/2018/10/08/J2EE%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
+      <title>测试</title>
+      <link href="/2018/10/15/%E6%B5%8B%E8%AF%95/"/>
+      <url>/2018/10/15/%E6%B5%8B%E8%AF%95/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
       
+    </entry>
+    
+    <entry>
+      <title>J2EE从零搭建开发环境</title>
+      <link href="/2018/10/08/J2EE%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+      <url>/2018/10/08/J2EE%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>记录一下搭建开发环境的常用步骤，虽然网上也有很多更详细的教程，但是不够全面，要去找很多才能搭建成功，收藏的链接也会失效，也不保证我的教程适用于所有人，仅供参考。以后也许还会不断的完善这份教程。<br><a id="more"></a></p><h3 id="1-1安装JDK"><a href="#1-1安装JDK" class="headerlink" title="1.1安装JDK"></a>1.1安装JDK</h3><p>Oracle JDK8<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">官网下载地址</a>，其他的版本也在里面，下载首先注册一个Oracle账号。</p><h3 id="1-2配置环境变量"><a href="#1-2配置环境变量" class="headerlink" title="1.2配置环境变量"></a>1.2配置环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME       Program\JDK\jdk1.6.0_10</span><br><span class="line">Path            ;%JAVA_HOME%\bin;</span><br><span class="line">CLASSPATH       .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar</span><br></pre></td></tr></table></figure><p>也可以直接输入绝对路径，但建议使用%JAVA_HOME%的方式。至此JDK 的配置也完成，打开一个命令行窗口，键入set classpath 与set java_home应该可以看到正确的配置信息。<br>同时，输入</p><blockquote><p>java -version</p></blockquote><p>看系统能否找到JAVA 的编译器。显示下图所示，代表配置成功<br><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%831.png" alt=""></p><h3 id="2-1安装weblogic"><a href="#2-1安装weblogic" class="headerlink" title="2.1安装weblogic"></a>2.1安装weblogic</h3><p>安装Weblogic时，有最低JDK版本的要求，最新版本的Weblogic12.2.1.3服务器要求必须是JDK8及以上。<br>点击安装，可能防火墙会阻挡下，允许通过就行</p><p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%835.png" alt=""></p><p>点击下一步</p><p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%836.png" alt=""></p><p>下一步</p><p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%837.png" alt=""></p><p>下一步</p><p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%838.png" alt="8"></p><p>下一步</p><p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%839.png" alt=""></p><p>下一步</p><p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8310.png" alt=""></p><p>下一步</p><p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8311.png" alt="11"></p><p>下一步</p><p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8312.png" alt=""></p><p>下一步</p><p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8313.png" alt=""></p><p>下一步</p><p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8314.png" alt=""></p><p>下一步</p><p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8315.png" alt=""></p><p>等待安装完成</p><p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8316.png" alt="16"></p><h3 id="3-1安装SVN客户端"><a href="#3-1安装SVN客户端" class="headerlink" title="3.1安装SVN客户端"></a>3.1安装SVN客户端</h3><h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8317.png" alt=""></h2><p><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%832.png" alt=""><br><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%833.png" alt=""></p><h2 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="http://pgoai9ddk.bkt.clouddn.com/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%834.png" alt=""></h2><p>下一步<br>下一步</p><p><a href="https://portal.qiniu.com/signup?code=3lplk65p4i89e" target="_blank" rel="noopener">七牛云邀请链接</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
         <tags>
             
-            <tag> 教程 </tag>
+            <tag> JDK </tag>
+            
+            <tag> Oracle </tag>
+            
+            <tag> PLSQL </tag>
+            
+            <tag> Weblogic </tag>
+            
+            <tag> Tomcat </tag>
+            
+            <tag> J2EE </tag>
             
         </tags>
       
