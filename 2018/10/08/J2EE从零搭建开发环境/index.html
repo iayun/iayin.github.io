@@ -156,7 +156,7 @@
 <meta property="og:image" content="http://iayun.oss-cn-hangzhou.aliyuncs.com/%E6%95%99%E7%A8%8B/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8361.png">
 <meta property="og:image" content="http://iayun.oss-cn-hangzhou.aliyuncs.com/%E6%95%99%E7%A8%8B/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8362.png">
 <meta property="og:image" content="http://iayun.oss-cn-hangzhou.aliyuncs.com/%E6%95%99%E7%A8%8B/InkedJ2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8347_LI.jpg">
-<meta property="og:updated_time" content="2018-10-27T06:24:36.383Z">
+<meta property="og:updated_time" content="2018-10-27T06:58:22.727Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="J2EE从零搭建开发环境">
 <meta name="twitter:description" content="前言写在前面，记录一下搭建开发环境的常用步骤，虽然网上也有很多更详细的教程，但是不够全面，要去找很多才能搭建成功，收藏的链接也会失效，也不保证我的教程适用于所有人，仅供参考。以后也许还会不断的完善这份教程。在安装的过程中，我省略了一些路径的详细信息，大家按照自己的实际路径设置即可，是在没必要与我一模一样。一些参数更是如此。欢迎大家留言指教。">
@@ -466,7 +466,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2k
+                  2.1k
                 </span>
               
 
@@ -482,7 +482,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  8
                 </span>
               
             </div>
@@ -593,7 +593,10 @@
 </blockquote>
 <p><img src="http://iayun.oss-cn-hangzhou.aliyuncs.com/%E6%95%99%E7%A8%8B/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8361.png" alt="61"><br>然后写到环境变量中</p>
 <p><img src="http://iayun.oss-cn-hangzhou.aliyuncs.com/%E6%95%99%E7%A8%8B/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8362.png" alt=""><br>启动就正常了。<br>全部环境就已经搭建完成了，有问题要先学会自己思考。</p>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>1、如果出现这个<br><img src="http://iayun.oss-cn-hangzhou.aliyuncs.com/%E6%95%99%E7%A8%8B/InkedJ2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8347_LI.jpg" alt="47"><br>数据源名字不对，需要重新配置数据源。<br>2、如果有中文乱码，在项目代码编译后，启动服务器前将application\modules\component\resources路径下的.cmd脚本文件执行一下，这样就可以解决乱码问题。<br>3、weblogic服务器插件可以安装在Eclipse等开发工具中。<br>4、如果<br>5、</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>1、如果出现这个<br><img src="http://iayun.oss-cn-hangzhou.aliyuncs.com/%E6%95%99%E7%A8%8B/InkedJ2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8347_LI.jpg" alt="47"><br>数据源名字不对，需要重新配置数据源。<br>2、如果有中文乱码，在项目代码编译后，启动服务器前将application\modules\component\resources路径下的.cmd脚本文件执行一下，这样就可以解决乱码问题。<br>3、weblogic服务器插件可以安装在Eclipse等开发工具中。<br>4、如果启动服务在关闭过程中卡掉，可以在cmd窗口，先根据端口号查看进程</p>
+<blockquote>
+<p>netstat -aon|findstr “7001”<br>将进程关闭<br>taskkill /pid 48768 /F</p>
+</blockquote>
 
       
     </div>
@@ -614,6 +617,30 @@
 	
     
 
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>化欣赏为打赏</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="http://iayun.oss-cn-hangzhou.aliyuncs.com/%E9%85%8D%E7%BD%AE/%E5%BE%AE%E4%BF%A1%E6%89%93%E8%B5%8F%E7%A0%811.png" alt="纳兰闲云 微信"/>
+        <p>微信</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
