@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="Weblogic,JDK,Oracle,PL/SQL,Tomcat,J2EE," />
+  <meta name="keywords" content="JDK,Oracle,PL/SQL,Weblogic,Tomcat,J2EE," />
 
 
 
@@ -91,7 +91,7 @@
 
 
 <meta name="description" content="前言写在前面，记录一下搭建开发环境的常用步骤，虽然网上也有很多更详细的教程，但是不够全面，要去找很多才能搭建成功，收藏的链接也会失效，也不保证我的教程适用于所有人，仅供参考。以后也许还会不断的完善这份教程。在安装的过程中，我省略了一些路径的详细信息，大家按照自己的实际路径设置即可，实在没必要与我一模一样。一些参数更是如此。欢迎大家留言指教。">
-<meta name="keywords" content="Weblogic,JDK,Oracle,PL&#x2F;SQL,Tomcat,J2EE">
+<meta name="keywords" content="JDK,Oracle,PL&#x2F;SQL,Weblogic,Tomcat,J2EE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="J2EE从零搭建开发环境">
 <meta property="og:url" content="http://iayun.vip/2018/10/08/J2EE从零搭建开发环境/index.html">
@@ -156,7 +156,7 @@
 <meta property="og:image" content="http://iayun.oss-cn-hangzhou.aliyuncs.com/%E6%95%99%E7%A8%8B/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8361.png">
 <meta property="og:image" content="http://iayun.oss-cn-hangzhou.aliyuncs.com/%E6%95%99%E7%A8%8B/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8362.png">
 <meta property="og:image" content="http://iayun.oss-cn-hangzhou.aliyuncs.com/%E6%95%99%E7%A8%8B/InkedJ2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8347_LI.jpg">
-<meta property="og:updated_time" content="2018-10-28T05:41:53.832Z">
+<meta property="og:updated_time" content="2018-10-29T13:40:44.897Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="J2EE从零搭建开发环境">
 <meta name="twitter:description" content="前言写在前面，记录一下搭建开发环境的常用步骤，虽然网上也有很多更详细的教程，但是不够全面，要去找很多才能搭建成功，收藏的链接也会失效，也不保证我的教程适用于所有人，仅供参考。以后也许还会不断的完善这份教程。在安装的过程中，我省略了一些路径的详细信息，大家按照自己的实际路径设置即可，实在没必要与我一模一样。一些参数更是如此。欢迎大家留言指教。">
@@ -402,7 +402,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T21:43:31+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T22:00:00+08:00">
                 2018-10-08
               </time>
             
@@ -466,7 +466,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2k
+                  2.3k
                 </span>
               
 
@@ -482,7 +482,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  8
+                  9
                 </span>
               
             </div>
@@ -593,7 +593,8 @@
 </blockquote>
 <p><img src="http://iayun.oss-cn-hangzhou.aliyuncs.com/%E6%95%99%E7%A8%8B/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8361.png" alt="61"><br>然后写到环境变量中</p>
 <p><img src="http://iayun.oss-cn-hangzhou.aliyuncs.com/%E6%95%99%E7%A8%8B/J2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8362.png" alt=""><br>启动就正常了。<br>全部环境就已经搭建完成了，有问题要先学会自己思考。</p>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>1、如果出现这个<br><img src="http://iayun.oss-cn-hangzhou.aliyuncs.com/%E6%95%99%E7%A8%8B/InkedJ2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8347_LI.jpg" alt="47"><br>数据源名字不对，需要重新配置数据源。<br>2、如果有中文乱码，在项目代码编译后，启动服务器前将application\modules\component\resources路径下的.cmd脚本文件执行一下，这样就可以解决乱码问题。<br>3、weblogic服务器插件可以安装在Eclipse等开发工具中。<br>4、如果启动服务在关闭过程中卡掉，可以在cmd窗口，先根据端口号查看进程</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>1、如果出现这个<br><img src="http://iayun.oss-cn-hangzhou.aliyuncs.com/%E6%95%99%E7%A8%8B/InkedJ2EE%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%8347_LI.jpg" alt="47"><br>数据源名字不对，需要重新配置数据源。<br>2、如果有中文乱码，在项目代码编译后，启动服务器前将application\modules\component\resources路径下的.cmd脚本文件执行一下，这样就可以解决乱码问题。<br>3、weblogic服务器插件可以安装在Eclipse等开发工具中。<br>4、非正常结束weblogic进程导致weblogic无法启动。由于先前服务器直接down掉了，所有进程都非正常的进行关闭了，也就导致了下次启动weblogic的时候报了以下错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;2017-10-2 下午05时08分34秒 CST&gt; &lt;Info&gt; &lt;Management&gt; &lt;BEA-141281&gt; &lt;unable to get file lock, will retry …&gt;</span><br><span class="line">&lt;2017-10-2 下午05时08分44秒 CST&gt; &lt;Info&gt; &lt;Management&gt; &lt;BEA-141281&gt; &lt;unable to get file lock, will retry …&gt;</span><br></pre></td></tr></table></figure></p>
+<p>可以在cmd窗口，先根据端口号查看进程</p>
 <blockquote>
 <p>netstat -aon|findstr “7001”</p>
 </blockquote>
@@ -601,6 +602,11 @@
 <blockquote>
 <p>taskkill /pid 48768 /F</p>
 </blockquote>
+<p>然后重新启动。</p>
+<p>5、如果启动项目出现以下错误信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.springframework.orm.hibernate3.HibernateQueryException: ClassNotFoundException: org.hibernate.hql.ast.HqlToken [delete from com.sinosoft.application.prpall.dto.domain.GuProposalExchangeDto where 1=1  AND (proposalNo = &apos;U5PAR000010142017&apos;) ]; nested exception is org.hibernate.QueryException: ClassNotFoundException: org.hibernate.hql.ast.HqlToken [delete from com.sinosoft.application.prpall.dto.domain.GuProposalExchangeDto where 1=1  AND (proposalNo = &apos;U5PAR000010142017&apos;) ]</span><br></pre></td></tr></table></figure></p>
+<p>将项目路径    \SourceCode\application-2B\modules\webapps\WEB-INF\lib下的 antlr-2.7.6rc1.jar 复制在weblogic域中路径\WebLogic\user_projects\domains\well8001\lib 路径中，并在\WebLogic\user_projects\domains\well8001\bin\setDomainEnv.cmd文件中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set JAVA_HOME=%JAVA_HOME%</span><br><span class="line">for %%i in (&quot;%JAVA_HOME%&quot;) do set JAVA_HOME=%%~fsi</span><br></pre></td></tr></table></figure></p>
+<p>下添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set PRE_CLASSPATH=E:\WebLogic\user_projects\domains\well8001\lib\antlr-2.7.6rc1.jar</span><br></pre></td></tr></table></figure></p>
+<p>重新启动即可解决。</p>
 
       
     </div>
@@ -653,13 +659,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Weblogic/" rel="tag"><i class="fa fa-tag"></i> Weblogic</a>
-          
             <a href="/tags/JDK/" rel="tag"><i class="fa fa-tag"></i> JDK</a>
           
             <a href="/tags/Oracle/" rel="tag"><i class="fa fa-tag"></i> Oracle</a>
           
             <a href="/tags/PL-SQL/" rel="tag"><i class="fa fa-tag"></i> PL/SQL</a>
+          
+            <a href="/tags/Weblogic/" rel="tag"><i class="fa fa-tag"></i> Weblogic</a>
           
             <a href="/tags/Tomcat/" rel="tag"><i class="fa fa-tag"></i> Tomcat</a>
           
@@ -803,7 +809,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -814,7 +820,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -825,7 +831,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -838,7 +844,7 @@ var jiathis_config={
 					<h3 class="widget-title">Tag Cloud</h3>
 					<div id="myCanvasContainer" class="widget tagcloud">
 						<canvas width="250" height="250" id="resCanvas" style="width=100%">
-							<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/J2EE/">J2EE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDK/">JDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PL-SQL/">PL/SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weblogic/">Weblogic</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sit/">sit</a><span class="tag-list-count">1</span></li></ul>
+							<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bat/">.bat</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/J2EE/">J2EE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDK/">JDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PL-SQL/">PL/SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weblogic/">Weblogic</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sit/">sit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/window/">window</a><span class="tag-list-count">2</span></li></ul>
 						</canvas>
 					</div>
 				</div>
@@ -913,7 +919,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.1k</span>
+    <span title="Site words total count">4k</span>
   
 </div>
 
