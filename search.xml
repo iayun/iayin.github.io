@@ -37,7 +37,7 @@
       
       <categories>
           
-          <category> window脚本 </category>
+          <category> 常用命令 </category>
           
       </categories>
       
@@ -62,7 +62,7 @@
       
       <categories>
           
-          <category> window脚本 </category>
+          <category> 常用命令 </category>
           
       </categories>
       
@@ -72,6 +72,29 @@
             <tag> .bat </tag>
             
             <tag> window </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>linux下常用的命令</title>
+      <link href="/linux%E4%B8%8B%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4.html"/>
+      <url>/linux%E4%B8%8B%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4.html</url>
+      
+        <content type="html"><![CDATA[<p>在使用XShell过程中经常用到的一些命令<br><a id="more"></a></p><p>1.查看服务端口启动</p><blockquote><p>netstat -lntp|grep 6101<br>lsof -i:6101</p></blockquote><p>2.查看日志</p><blockquote><p>view admin6101.log</p></blockquote><p>3.从底部查看日志</p><blockquote><p>tail -f admin6101.log</p></blockquote><p>4.退出查看日志</p><blockquote><p>ctrl + c</p></blockquote><p>5.上传文件（直接从桌面上传）</p><blockquote><p>rz</p></blockquote><p>6.赋予执行权限</p><blockquote><p>chmod u+x weblogic_prod.sh</p></blockquote><p>7.服务重复启动</p><blockquote><p>lock        rm -rf domain/servers/{cache,data,tmp}</p></blockquote><p>8.复制文件<br>file2文件不存在</p><blockquote><p>cp -r file1 file2</p></blockquote><p>file2文件已存在</p><blockquote><p>cp -r file1/. file2</p></blockquote><p>9.移动文件<br>将/usr/udt中的所有文件移到当前目录(用”.”表示)中：</p><blockquote><p>mv /usr/udt/* .</p></blockquote><p>将文件test.txt重命名为wbk.txt：</p><blockquote><p>mv test.txt wbk.txt</p></blockquote><p>把当前目录的一个子目录里的文件移动到另一个子目录里</p><blockquote><p>mv 文件名/* 另一个目录</p></blockquote><p>移动当前文件夹下的所有文件到上一级目录</p><blockquote><p>mv * ../</p></blockquote><p>10.解压命令</p><blockquote><p><em>.tar 用 tar –xvf 解压</em>.gz 用 gzip -d或者gunzip 解压<br><em>.tar.gz和</em>.tgz 用 tar –xzf 解压<br><em>.bz2 用 bzip2 -d或者用bunzip2 解压</em>.tar.bz2用tar –xjf 解压<br><em>.Z 用 uncompress 解压</em>.tar.Z 用tar –xZf 解压<br><em>.rar 用 unrar e解压</em>.zip 用 unzip 解压</p></blockquote><p>11.Linux系统中创建分组、创建用户、设置密码、修改用户、删除用户<br>创建分组</p><blockquote><p>groupadd -g 1000 evan</p></blockquote><p>创建用户testuser</p><blockquote><p>useradd testuser</p></blockquote><p>给已创建的用户testuser设置密码(新创建的用户会在/home下创建一个用户目录testuser)</p><blockquote><p>passwd testuser</p></blockquote><p>移动用户</p><blockquote><p>usermod -a -G evan testuser</p></blockquote><p>修改用户这个命令的相关参数</p><blockquote><p>usermod –help</p></blockquote><p>删除用户testuser</p><blockquote><p>userdel testuser</p></blockquote><p>删除用户testuser所在目录</p><blockquote><p>rm -rf testuser</p></blockquote><p>切换用户的命令为</p><blockquote><p>su username 会使用root的环境变量<br>su - username</p></blockquote><p>从普通用户切换到root用户，还可以使用命令</p><blockquote><p>sudo su</p></blockquote><p>查看用户分组</p><blockquote><p>id username</p></blockquote><p>恢复普通用户权限</p><blockquote><p>chown -R group.username /u05</p></blockquote><p>12.数据库的导入导出<br>建立导出的目录</p><blockquote><p>create directory dmps as ‘/u02/dmps’;</p></blockquote><p>赋权给导出来的用户</p><blockquote><p>grant read,write on directory dmps to system;</p></blockquote><p>在Linux上的服务端执行导出schema</p><blockquote><p>expdp system/manager directory=dmps dumpfile=user_20180928.dmp logfile=user_20180928_exp.log schemas=user</p></blockquote><p>切换用户 进行映射</p><blockquote><p>impdp system/manager directory=dmps dumpfile=user_20180928.dmp logfile=user_20180928_exp.log remap_schema=user:prod</p></blockquote><p>13.寻找</p><blockquote><p>find / -name “<em>mysql</em>“</p></blockquote><p>/代表从选择要模糊查询的目录<br>也可以是其他的 比如user  查找user目录<br>mysql代表要模糊查找的名字<br>14.运行级别</p><blockquote><p>runlevel</p></blockquote><p>15.替换</p><blockquote><p>view<br>:%s#01#02#g</p></blockquote><p>16.给予权限–命令:</p><blockquote><p>chmod 777 web.xml</p></blockquote><p>17.关闭weblogic用户下所有进程</p><blockquote><p>killall -uweblogic java</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 常用命令 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
             
         </tags>
       
