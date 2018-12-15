@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="Weblogic,linux,sit," />
+  <meta name="keywords" content="ExtJS3,Basic Array Grid," />
 
 
 
@@ -90,18 +90,20 @@
 
 
 
-<meta name="description" content="众生皆苦，还好我甜！">
-<meta name="keywords" content="Weblogic,linux,sit">
+<meta name="description" content="ExtJS3 之 Basic Array Grid">
+<meta name="keywords" content="ExtJS3,Basic Array Grid">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在服务器下搭建测试环境">
-<meta property="og:url" content="http://iayun.vip/2018/10/15/在服务器下搭建测试环境/index.html">
+<meta property="og:title" content="Basic Array Grid">
+<meta property="og:url" content="http://iayun.vip/Basic Array Grid.html">
 <meta property="og:site_name" content="闲云逐浪">
-<meta property="og:description" content="众生皆苦，还好我甜！">
+<meta property="og:description" content="ExtJS3 之 Basic Array Grid">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-27T05:47:43.802Z">
+<meta property="og:image" content="http://iayun.oss-cn-hangzhou.aliyuncs.com/ExtJS/Basic%20Array%20Grid.jpg">
+<meta property="og:updated_time" content="2018-12-15T12:24:22.234Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在服务器下搭建测试环境">
-<meta name="twitter:description" content="众生皆苦，还好我甜！">
+<meta name="twitter:title" content="Basic Array Grid">
+<meta name="twitter:description" content="ExtJS3 之 Basic Array Grid">
+<meta name="twitter:image" content="http://iayun.oss-cn-hangzhou.aliyuncs.com/ExtJS/Basic%20Array%20Grid.jpg">
 
 
 
@@ -131,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://iayun.vip/2018/10/15/在服务器下搭建测试环境/"/>
+  <link rel="canonical" href="http://iayun.vip/Basic Array Grid.html"/>
 
 
 
 
 
-  <title>在服务器下搭建测试环境 | 闲云逐浪</title>
+  <title>Basic Array Grid | 闲云逐浪</title>
   
 
 
@@ -314,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://iayun.vip/2018/10/15/在服务器下搭建测试环境/">
+    <link itemprop="mainEntityOfPage" href="http://iayun.vip/Basic Array Grid.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="纳兰闲云">
@@ -331,7 +333,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">在服务器下搭建测试环境</h2>
+          <h2 class="post-title" itemprop="name headline">Basic Array Grid</h2>
         
 
         <div class="post-meta">
@@ -343,8 +345,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-15T21:31:57+08:00">
-                2018-10-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-01T22:00:00+08:00">
+                2018-12-01
               </time>
             
 
@@ -366,8 +368,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
+                  <a href="/categories/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
                   </a>
                 </span>
 
@@ -384,8 +386,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/10/15/在服务器下搭建测试环境/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/10/15/在服务器下搭建测试环境/" itemprop="commentsCount"></span>
+                <a href="/Basic Array Grid.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/Basic Array Grid.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -407,7 +409,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  953
                 </span>
               
 
@@ -423,7 +425,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  5
                 </span>
               
             </div>
@@ -444,7 +446,10 @@
       
 
       
-        
+        <p>ExtJS3 之 Basic Array Grid<br><a id="more"></a><br><img src="http://iayun.oss-cn-hangzhou.aliyuncs.com/ExtJS/Basic%20Array%20Grid.jpg" alt="Basic%20Array%20Grid"></p>
+<p><code>array-grid.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">This file is part of Ext JS 3.4</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">Copyright (c) 2011-2013 Sencha Inc</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">Contact:  </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">GNU General Public License Usage</span></span><br><span class="line"><span class="comment">This file may be used under the terms of the GNU General Public License version 3.0 as</span></span><br><span class="line"><span class="comment">published by the Free Software Foundation and appearing in the file LICENSE included in the packaging of this file.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">Please review the following information to ensure the GNU General Public License version 3.0</span></span><br><span class="line"><span class="comment">requirements will be met: http://www.gnu.org/copyleft/gpl.html.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">If you are unsure which license is appropriate for your use, please contact the sales department at http://www.sencha.com/contact.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">Build date: 2013-04-03 15:07:25</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">Ext.onReady(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    Ext.QuickTips.init();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// <span class="doctag">NOTE:</span> This is an example showing simple state management. During development,</span></span><br><span class="line">    <span class="comment">// it is generally best to disable state management as dynamically-generated ids</span></span><br><span class="line">    <span class="comment">// can change across page loads, leading to unpredictable results.  The developer</span></span><br><span class="line">    <span class="comment">// should ensure that stable state ids are set for stateful components in real apps.    </span></span><br><span class="line">    Ext.state.Manager.setProvider(<span class="keyword">new</span> Ext.state.CookieProvider());</span><br><span class="line"></span><br><span class="line">    <span class="comment">// sample static data for the store</span></span><br><span class="line">    <span class="keyword">var</span> myData = [</span><br><span class="line">        [<span class="string">'3m Co'</span>,                               <span class="number">71.72</span>, <span class="number">0.02</span>,  <span class="number">0.03</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'Alcoa Inc'</span>,                           <span class="number">29.01</span>, <span class="number">0.42</span>,  <span class="number">1.47</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'Altria Group Inc'</span>,                    <span class="number">83.81</span>, <span class="number">0.28</span>,  <span class="number">0.34</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'American Express Company'</span>,            <span class="number">52.55</span>, <span class="number">0.01</span>,  <span class="number">0.02</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'American International Group, Inc.'</span>,  <span class="number">64.13</span>, <span class="number">0.31</span>,  <span class="number">0.49</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'AT&amp;T Inc.'</span>,                           <span class="number">31.61</span>, <span class="number">-0.48</span>, <span class="number">-1.54</span>, <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'Boeing Co.'</span>,                          <span class="number">75.43</span>, <span class="number">0.53</span>,  <span class="number">0.71</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'Caterpillar Inc.'</span>,                    <span class="number">67.27</span>, <span class="number">0.92</span>,  <span class="number">1.39</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'Citigroup, Inc.'</span>,                     <span class="number">49.37</span>, <span class="number">0.02</span>,  <span class="number">0.04</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'E.I. du Pont de Nemours and Company'</span>, <span class="number">40.48</span>, <span class="number">0.51</span>,  <span class="number">1.28</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'Exxon Mobil Corp'</span>,                    <span class="number">68.1</span>,  <span class="number">-0.43</span>, <span class="number">-0.64</span>, <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'General Electric Company'</span>,            <span class="number">34.14</span>, <span class="number">-0.08</span>, <span class="number">-0.23</span>, <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'General Motors Corporation'</span>,          <span class="number">30.27</span>, <span class="number">1.09</span>,  <span class="number">3.74</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'Hewlett-Packard Co.'</span>,                 <span class="number">36.53</span>, <span class="number">-0.03</span>, <span class="number">-0.08</span>, <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'Honeywell Intl Inc'</span>,                  <span class="number">38.77</span>, <span class="number">0.05</span>,  <span class="number">0.13</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'Intel Corporation'</span>,                   <span class="number">19.88</span>, <span class="number">0.31</span>,  <span class="number">1.58</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'International Business Machines'</span>,     <span class="number">81.41</span>, <span class="number">0.44</span>,  <span class="number">0.54</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'Johnson &amp; Johnson'</span>,                   <span class="number">64.72</span>, <span class="number">0.06</span>,  <span class="number">0.09</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'JP Morgan &amp; Chase &amp; Co'</span>,              <span class="number">45.73</span>, <span class="number">0.07</span>,  <span class="number">0.15</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'McDonald\'s Corporation'</span>,             <span class="number">36.76</span>, <span class="number">0.86</span>,  <span class="number">2.40</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'Merck &amp; Co., Inc.'</span>,                   <span class="number">40.96</span>, <span class="number">0.41</span>,  <span class="number">1.01</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'Microsoft Corporation'</span>,               <span class="number">25.84</span>, <span class="number">0.14</span>,  <span class="number">0.54</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'Pfizer Inc'</span>,                          <span class="number">27.96</span>, <span class="number">0.4</span>,   <span class="number">1.45</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'The Coca-Cola Company'</span>,               <span class="number">45.07</span>, <span class="number">0.26</span>,  <span class="number">0.58</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'The Home Depot, Inc.'</span>,                <span class="number">34.64</span>, <span class="number">0.35</span>,  <span class="number">1.02</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'The Procter &amp; Gamble Company'</span>,        <span class="number">61.91</span>, <span class="number">0.01</span>,  <span class="number">0.02</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'United Technologies Corporation'</span>,     <span class="number">63.26</span>, <span class="number">0.55</span>,  <span class="number">0.88</span>,  <span class="string">'9/1 12:00am'</span>],</span><br><span class="line">        [<span class="string">'Verizon Communications'</span>,              <span class="number">35.57</span>, <span class="number">0.39</span>,  <span class="number">1.11</span>,  <span class="string">'9/1 12:00am'</span>],            </span><br><span class="line">        [<span class="string">'Wal-Mart Stores, Inc.'</span>,               <span class="number">45.45</span>, <span class="number">0.73</span>,  <span class="number">1.63</span>,  <span class="string">'9/1 12:00am'</span>]</span><br><span class="line">    ];</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Custom function used for column renderer</span></span><br><span class="line"><span class="comment">     * @param &#123;Object&#125; val</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">change</span>(<span class="params">val</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (val &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">'&lt;span style="color:green;"&gt;'</span> + val + <span class="string">'&lt;/span&gt;'</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (val &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">'&lt;span style="color:red;"&gt;'</span> + val + <span class="string">'&lt;/span&gt;'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Custom function used for column renderer</span></span><br><span class="line"><span class="comment">     * @param &#123;Object&#125; val</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">pctChange</span>(<span class="params">val</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (val &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">'&lt;span style="color:green;"&gt;'</span> + val + <span class="string">'%&lt;/span&gt;'</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (val &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">'&lt;span style="color:red;"&gt;'</span> + val + <span class="string">'%&lt;/span&gt;'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// create the data store</span></span><br><span class="line">    <span class="keyword">var</span> store = <span class="keyword">new</span> Ext.data.ArrayStore(&#123;</span><br><span class="line">        fields: [</span><br><span class="line">           &#123;<span class="attr">name</span>: <span class="string">'company'</span>&#125;,</span><br><span class="line">           &#123;<span class="attr">name</span>: <span class="string">'price'</span>,      <span class="attr">type</span>: <span class="string">'float'</span>&#125;,</span><br><span class="line">           &#123;<span class="attr">name</span>: <span class="string">'change'</span>,     <span class="attr">type</span>: <span class="string">'float'</span>&#125;,</span><br><span class="line">           &#123;<span class="attr">name</span>: <span class="string">'pctChange'</span>,  <span class="attr">type</span>: <span class="string">'float'</span>&#125;,</span><br><span class="line">           &#123;<span class="attr">name</span>: <span class="string">'lastChange'</span>, <span class="attr">type</span>: <span class="string">'date'</span>, <span class="attr">dateFormat</span>: <span class="string">'n/j h:ia'</span>&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// manually load local data</span></span><br><span class="line">    store.loadData(myData);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// create the Grid</span></span><br><span class="line">    <span class="keyword">var</span> grid = <span class="keyword">new</span> Ext.grid.GridPanel(&#123;</span><br><span class="line">        store: store,</span><br><span class="line">        columns: [</span><br><span class="line">            &#123;</span><br><span class="line">                id       :<span class="string">'company'</span>,</span><br><span class="line">                header   : <span class="string">'Company'</span>,</span><br><span class="line">                width    : <span class="number">160</span>,</span><br><span class="line">                sortable : <span class="literal">true</span>,</span><br><span class="line">                dataIndex: <span class="string">'company'</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                header   : <span class="string">'Price'</span>,</span><br><span class="line">                width    : <span class="number">75</span>,</span><br><span class="line">                sortable : <span class="literal">true</span>,</span><br><span class="line">                renderer : <span class="string">'usMoney'</span>,</span><br><span class="line">                dataIndex: <span class="string">'price'</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                header   : <span class="string">'Change'</span>,</span><br><span class="line">                width    : <span class="number">75</span>,</span><br><span class="line">                sortable : <span class="literal">true</span>,</span><br><span class="line">                renderer : change,</span><br><span class="line">                dataIndex: <span class="string">'change'</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                header   : <span class="string">'% Change'</span>,</span><br><span class="line">                width    : <span class="number">75</span>,</span><br><span class="line">                sortable : <span class="literal">true</span>,</span><br><span class="line">                renderer : pctChange,</span><br><span class="line">                dataIndex: <span class="string">'pctChange'</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                header   : <span class="string">'Last Updated'</span>,</span><br><span class="line">                width    : <span class="number">85</span>,</span><br><span class="line">                sortable : <span class="literal">true</span>,</span><br><span class="line">                renderer : Ext.util.Format.dateRenderer(<span class="string">'m/d/Y'</span>),</span><br><span class="line">                dataIndex: <span class="string">'lastChange'</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                xtype: <span class="string">'actioncolumn'</span>,</span><br><span class="line">                width: <span class="number">50</span>,</span><br><span class="line">                items: [&#123;</span><br><span class="line">                    icon   : <span class="string">'../shared/icons/fam/delete.gif'</span>,  <span class="comment">// Use a URL in the icon config</span></span><br><span class="line">                    tooltip: <span class="string">'Sell stock'</span>,</span><br><span class="line">                    handler: <span class="function"><span class="keyword">function</span>(<span class="params">grid, rowIndex, colIndex</span>) </span>&#123;</span><br><span class="line">                        <span class="keyword">var</span> rec = store.getAt(rowIndex);</span><br><span class="line">                        alert(<span class="string">"Sell "</span> + rec.get(<span class="string">'company'</span>));</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;, &#123;</span><br><span class="line">                    getClass: <span class="function"><span class="keyword">function</span>(<span class="params">v, meta, rec</span>) </span>&#123;          <span class="comment">// Or return a class from a function</span></span><br><span class="line">                        <span class="keyword">if</span> (rec.get(<span class="string">'change'</span>) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                            <span class="keyword">this</span>.items[<span class="number">1</span>].tooltip = <span class="string">'Do not buy!'</span>;</span><br><span class="line">                            <span class="keyword">return</span> <span class="string">'alert-col'</span>;</span><br><span class="line">                        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                            <span class="keyword">this</span>.items[<span class="number">1</span>].tooltip = <span class="string">'Buy stock'</span>;</span><br><span class="line">                            <span class="keyword">return</span> <span class="string">'buy-col'</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;,</span><br><span class="line">                    handler: <span class="function"><span class="keyword">function</span>(<span class="params">grid, rowIndex, colIndex</span>) </span>&#123;</span><br><span class="line">                        <span class="keyword">var</span> rec = store.getAt(rowIndex);</span><br><span class="line">                        alert(<span class="string">"Buy "</span> + rec.get(<span class="string">'company'</span>));</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;]</span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        stripeRows: <span class="literal">true</span>,</span><br><span class="line">        autoExpandColumn: <span class="string">'company'</span>,</span><br><span class="line">        height: <span class="number">350</span>,</span><br><span class="line">        width: <span class="number">600</span>,</span><br><span class="line">        title: <span class="string">'Array Grid'</span>,</span><br><span class="line">        <span class="comment">// config options for stateful behavior</span></span><br><span class="line">        stateful: <span class="literal">true</span>,</span><br><span class="line">        stateId: <span class="string">'grid'</span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// render the grid to the specified div in the page</span></span><br><span class="line">    grid.render(<span class="string">'grid-example'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -496,11 +501,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Weblogic/" rel="tag"><i class="fa fa-tag"></i> Weblogic</a>
+            <a href="/tags/ExtJS3/" rel="tag"><i class="fa fa-tag"></i> ExtJS3</a>
           
-            <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
-          
-            <a href="/tags/sit/" rel="tag"><i class="fa fa-tag"></i> sit</a>
+            <a href="/tags/Basic-Array-Grid/" rel="tag"><i class="fa fa-tag"></i> Basic Array Grid</a>
           
         </div>
       
@@ -513,8 +516,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/08/J2EE从零搭建开发环境/" rel="next" title="J2EE从零搭建开发环境">
-                <i class="fa fa-chevron-left"></i> J2EE从零搭建开发环境
+              <a href="/《We-Are-Not-Ourselves》.html" rel="next" title="《We Are Not Ourselves》">
+                <i class="fa fa-chevron-left"></i> 《We Are Not Ourselves》
               </a>
             
           </div>
@@ -523,8 +526,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/28/Windows用脚本收集文件夹下文件名/" rel="prev" title="Windows用脚本收集文件夹下文件名">
-                Windows用脚本收集文件夹下文件名 <i class="fa fa-chevron-right"></i>
+              <a href="/ExtJS3.html" rel="prev" title="ExtJS框架的学习">
+                ExtJS框架的学习 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -631,7 +634,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -642,7 +645,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -653,7 +656,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -666,7 +669,7 @@ var jiathis_config={
 					<h3 class="widget-title">Tag Cloud</h3>
 					<div id="myCanvasContainer" class="widget tagcloud">
 						<canvas width="250" height="250" id="resCanvas" style="width=100%">
-							<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bat/">.bat</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/J2EE/">J2EE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDK/">JDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PL-SQL/">PL/SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weblogic/">Weblogic</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sit/">sit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/window/">window</a><span class="tag-list-count">2</span></li></ul>
+							<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bat/">.bat</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Basic-Array-Grid/">Basic Array Grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dynamic-Forms/">Dynamic Forms</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Editable-Grid/">Editable Grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ExtJS3/">ExtJS3</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/J2EE/">J2EE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDK/">JDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PL-SQL/">PL/SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pivot-Grid/">Pivot Grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Property-Grid/">Property Grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weblogic/">Weblogic</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XML-Grid/">XML Grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sit/">sit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/window/">window</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/《We-Are-Not-Ourselves》/">《We Are Not Ourselves》</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/《不属于我们的世纪》/">《不属于我们的世纪》</a><span class="tag-list-count">1</span></li></ul>
 						</canvas>
 					</div>
 				</div>
@@ -725,7 +728,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.4k</span>
+    <span title="Site words total count">15.1k</span>
   
 </div>
 
