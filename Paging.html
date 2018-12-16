@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,纳兰闲云,闲云逐浪,博客,java,linux,脚本,代码,程序员" />
+  <meta name="keywords" content="ExtJS3,Paging," />
 
 
 
@@ -90,18 +90,19 @@
 
 
 
-<meta name="description" content="paging.js 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899">
+<meta name="description" content="ExtJS3 之 Paging。">
+<meta name="keywords" content="ExtJS3,Paging">
 <meta property="og:type" content="article">
-<meta property="og:title" content="闲云逐浪">
+<meta property="og:title" content="Paging">
 <meta property="og:url" content="http://iayun.vip/Paging.html">
 <meta property="og:site_name" content="闲云逐浪">
-<meta property="og:description" content="paging.js 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899">
+<meta property="og:description" content="ExtJS3 之 Paging。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://iayun.oss-cn-hangzhou.aliyuncs.com/ExtJS/Paging.jpg">
-<meta property="og:updated_time" content="2018-12-07T07:08:22.000Z">
+<meta property="og:updated_time" content="2018-12-15T13:04:38.442Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="闲云逐浪">
-<meta name="twitter:description" content="paging.js 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899">
+<meta name="twitter:title" content="Paging">
+<meta name="twitter:description" content="ExtJS3 之 Paging。">
 <meta name="twitter:image" content="http://iayun.oss-cn-hangzhou.aliyuncs.com/ExtJS/Paging.jpg">
 
 
@@ -138,7 +139,7 @@
 
 
 
-  <title> | 闲云逐浪</title>
+  <title>Paging | 闲云逐浪</title>
   
 
 
@@ -332,7 +333,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline"></h2>
+          <h2 class="post-title" itemprop="name headline">Paging</h2>
         
 
         <div class="post-meta">
@@ -344,8 +345,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-07T20:50:07+08:00">
-                2018-12-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-06T22:00:00+08:00">
+                2018-12-06
               </time>
             
 
@@ -354,6 +355,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -386,7 +409,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  542
+                  545
                 </span>
               
 
@@ -423,9 +446,10 @@
       
 
       
-        <p><img src="http://iayun.oss-cn-hangzhou.aliyuncs.com/ExtJS/Paging.jpg" alt="Paging"></p>
+        <p>ExtJS3 之 Paging。<br><a id="more"></a><br><img src="http://iayun.oss-cn-hangzhou.aliyuncs.com/ExtJS/Paging.jpg" alt="Paging"></p>
 <p><code>paging.js</code></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">This file is part of Ext JS 3.4</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">Copyright (c) 2011-2013 Sencha Inc</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">Contact:  http://www.sencha.com/contact</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">GNU General Public License Usage</span></span><br><span class="line"><span class="comment">This file may be used under the terms of the GNU General Public License version 3.0 as</span></span><br><span class="line"><span class="comment">published by the Free Software Foundation and appearing in the file LICENSE included in the</span></span><br><span class="line"><span class="comment">packaging of this file.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">Please review the following information to ensure the GNU General Public License version 3.0</span></span><br><span class="line"><span class="comment">requirements will be met: http://www.gnu.org/copyleft/gpl.html.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">If you are unsure which license is appropriate for your use, please contact the sales department</span></span><br><span class="line"><span class="comment">at http://www.sencha.com/contact.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">Build date: 2013-04-03 15:07:25</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">Ext.onReady(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// create the Data Store</span></span><br><span class="line">    <span class="keyword">var</span> store = <span class="keyword">new</span> Ext.data.JsonStore(&#123;</span><br><span class="line">        root: <span class="string">'topics'</span>,</span><br><span class="line">        totalProperty: <span class="string">'totalCount'</span>,</span><br><span class="line">        idProperty: <span class="string">'threadid'</span>,</span><br><span class="line">        remoteSort: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">        fields: [</span><br><span class="line">            <span class="string">'title'</span>, <span class="string">'forumtitle'</span>, <span class="string">'forumid'</span>, <span class="string">'author'</span>,</span><br><span class="line">            &#123;<span class="attr">name</span>: <span class="string">'replycount'</span>, <span class="attr">type</span>: <span class="string">'int'</span>&#125;,</span><br><span class="line">            &#123;<span class="attr">name</span>: <span class="string">'lastpost'</span>, <span class="attr">mapping</span>: <span class="string">'lastpost'</span>, <span class="attr">type</span>: <span class="string">'date'</span>, <span class="attr">dateFormat</span>: <span class="string">'timestamp'</span>&#125;,</span><br><span class="line">            <span class="string">'lastposter'</span>, <span class="string">'excerpt'</span></span><br><span class="line">        ],</span><br><span class="line"></span><br><span class="line">        <span class="comment">// load using script tags for cross domain, if the data in on the same domain as</span></span><br><span class="line">        <span class="comment">// this page, an HttpProxy would be better</span></span><br><span class="line">        proxy: <span class="keyword">new</span> Ext.data.ScriptTagProxy(&#123;</span><br><span class="line">            url: <span class="string">'http://extjs.com/forum/topics-browse-remote.php'</span></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;);</span><br><span class="line">    store.setDefaultSort(<span class="string">'lastpost'</span>, <span class="string">'desc'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// pluggable renders</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">renderTopic</span>(<span class="params">value, p, record</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">String</span>.format(</span><br><span class="line">                <span class="string">'&lt;b&gt;&lt;a href="http://extjs.com/forum/showthread.php?t=&#123;2&#125;" target="_blank"&gt;&#123;0&#125;&lt;/a&gt;&lt;/b&gt;&lt;a href="http://extjs.com/forum/forumdisplay.php?f=&#123;3&#125;" target="_blank"&gt;&#123;1&#125; Forum&lt;/a&gt;'</span>,</span><br><span class="line">                value, record.data.forumtitle, record.id, record.data.forumid);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">renderLast</span>(<span class="params">value, p, r</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">String</span>.format(<span class="string">'&#123;0&#125;&lt;br/&gt;by &#123;1&#125;'</span>, value.dateFormat(<span class="string">'M j, Y, g:i a'</span>), r.data[<span class="string">'lastposter'</span>]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> grid = <span class="keyword">new</span> Ext.grid.GridPanel(&#123;</span><br><span class="line">        width:<span class="number">700</span>,</span><br><span class="line">        height:<span class="number">500</span>,</span><br><span class="line">        title:<span class="string">'ExtJS.com - Browse Forums'</span>,</span><br><span class="line">        store: store,</span><br><span class="line">        trackMouseOver:<span class="literal">false</span>,</span><br><span class="line">        disableSelection:<span class="literal">true</span>,</span><br><span class="line">        loadMask: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// grid columns</span></span><br><span class="line">        columns:[&#123;</span><br><span class="line">            id: <span class="string">'topic'</span>, <span class="comment">// id assigned so we can apply custom css (e.g. .x-grid-col-topic b &#123; color:#333 &#125;)</span></span><br><span class="line">            header: <span class="string">"Topic"</span>,</span><br><span class="line">            dataIndex: <span class="string">'title'</span>,</span><br><span class="line">            width: <span class="number">420</span>,</span><br><span class="line">            renderer: renderTopic,</span><br><span class="line">            sortable: <span class="literal">true</span></span><br><span class="line">        &#125;,&#123;</span><br><span class="line">            header: <span class="string">"Author"</span>,</span><br><span class="line">            dataIndex: <span class="string">'author'</span>,</span><br><span class="line">            width: <span class="number">100</span>,</span><br><span class="line">            hidden: <span class="literal">true</span>,</span><br><span class="line">            sortable: <span class="literal">true</span></span><br><span class="line">        &#125;,&#123;</span><br><span class="line">            header: <span class="string">"Replies"</span>,</span><br><span class="line">            dataIndex: <span class="string">'replycount'</span>,</span><br><span class="line">            width: <span class="number">70</span>,</span><br><span class="line">            align: <span class="string">'right'</span>,</span><br><span class="line">            sortable: <span class="literal">true</span></span><br><span class="line">        &#125;,&#123;</span><br><span class="line">            id: <span class="string">'last'</span>,</span><br><span class="line">            header: <span class="string">"Last Post"</span>,</span><br><span class="line">            dataIndex: <span class="string">'lastpost'</span>,</span><br><span class="line">            width: <span class="number">150</span>,</span><br><span class="line">            renderer: renderLast,</span><br><span class="line">            sortable: <span class="literal">true</span></span><br><span class="line">        &#125;],</span><br><span class="line"></span><br><span class="line">        <span class="comment">// customize view config</span></span><br><span class="line">        viewConfig: &#123;</span><br><span class="line">            forceFit:<span class="literal">true</span>,</span><br><span class="line">            enableRowBody:<span class="literal">true</span>,</span><br><span class="line">            showPreview:<span class="literal">true</span>,</span><br><span class="line">            getRowClass : <span class="function"><span class="keyword">function</span>(<span class="params">record, rowIndex, p, store</span>)</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(<span class="keyword">this</span>.showPreview)&#123;</span><br><span class="line">                    p.body = <span class="string">'&lt;p&gt;'</span>+record.data.excerpt+<span class="string">'&lt;/p&gt;'</span>;</span><br><span class="line">                    <span class="keyword">return</span> <span class="string">'x-grid3-row-expanded'</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> <span class="string">'x-grid3-row-collapsed'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// paging bar on the bottom</span></span><br><span class="line">        bbar: <span class="keyword">new</span> Ext.PagingToolbar(&#123;</span><br><span class="line">            pageSize: <span class="number">25</span>,</span><br><span class="line">            store: store,</span><br><span class="line">            displayInfo: <span class="literal">true</span>,</span><br><span class="line">            displayMsg: <span class="string">'Displaying topics &#123;0&#125; - &#123;1&#125; of &#123;2&#125;'</span>,</span><br><span class="line">            emptyMsg: <span class="string">"No topics to display"</span>,</span><br><span class="line">            items:[</span><br><span class="line">                <span class="string">'-'</span>, &#123;</span><br><span class="line">                pressed: <span class="literal">true</span>,</span><br><span class="line">                enableToggle:<span class="literal">true</span>,</span><br><span class="line">                text: <span class="string">'Show Preview'</span>,</span><br><span class="line">                cls: <span class="string">'x-btn-text-icon details'</span>,</span><br><span class="line">                toggleHandler: <span class="function"><span class="keyword">function</span>(<span class="params">btn, pressed</span>)</span>&#123;</span><br><span class="line">                    <span class="keyword">var</span> view = grid.getView();</span><br><span class="line">                    view.showPreview = pressed;</span><br><span class="line">                    view.refresh();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;]</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// render it</span></span><br><span class="line">    grid.render(<span class="string">'topic-grid'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// trigger the data store load</span></span><br><span class="line">    store.load(&#123;<span class="attr">params</span>:&#123;<span class="attr">start</span>:<span class="number">0</span>, <span class="attr">limit</span>:<span class="number">25</span>&#125;&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -475,6 +499,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/ExtJS3/" rel="tag"><i class="fa fa-tag"></i> ExtJS3</a>
+          
+            <a href="/tags/Paging/" rel="tag"><i class="fa fa-tag"></i> Paging</a>
+          
+        </div>
+      
 
       
       
@@ -484,8 +516,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Dynamic Forms.html" rel="next" title="Dynamic Forms">
-                <i class="fa fa-chevron-left"></i> Dynamic Forms
+              <a href="/XML Grid.html" rel="next" title="XML Grid">
+                <i class="fa fa-chevron-left"></i> XML Grid
               </a>
             
           </div>
@@ -493,6 +525,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Dynamic Forms.html" rel="prev" title="Dynamic Forms">
+                Dynamic Forms <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -598,7 +634,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -609,7 +645,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -620,7 +656,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -633,7 +669,7 @@ var jiathis_config={
 					<h3 class="widget-title">Tag Cloud</h3>
 					<div id="myCanvasContainer" class="widget tagcloud">
 						<canvas width="250" height="250" id="resCanvas" style="width=100%">
-							<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bat/">.bat</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Basic-Array-Grid/">Basic Array Grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dynamic-Forms/">Dynamic Forms</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Editable-Grid/">Editable Grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ExtJS3/">ExtJS3</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/J2EE/">J2EE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDK/">JDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PL-SQL/">PL/SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pivot-Grid/">Pivot Grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Property-Grid/">Property Grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weblogic/">Weblogic</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XML-Grid/">XML Grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sit/">sit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/window/">window</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/《We-Are-Not-Ourselves》/">《We Are Not Ourselves》</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/《不属于我们的世纪》/">《不属于我们的世纪》</a><span class="tag-list-count">1</span></li></ul>
+							<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bat/">.bat</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Basic-Array-Grid/">Basic Array Grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dynamic-Forms/">Dynamic Forms</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Editable-Grid/">Editable Grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ExtJS3/">ExtJS3</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/J2EE/">J2EE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDK/">JDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle/">Oracle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PL-SQL/">PL/SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paging/">Paging</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pivot-Grid/">Pivot Grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Property-Grid/">Property Grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weblogic/">Weblogic</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XML-Grid/">XML Grid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sit/">sit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/window/">window</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/《We-Are-Not-Ourselves》/">《We Are Not Ourselves》</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/《不属于我们的世纪》/">《不属于我们的世纪》</a><span class="tag-list-count">1</span></li></ul>
 						</canvas>
 					</div>
 				</div>
@@ -692,7 +728,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">15.1k</span>
+    <span title="Site words total count">17.8k</span>
   
 </div>
 
