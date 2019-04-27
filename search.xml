@@ -314,6 +314,29 @@
     </entry>
     
     <entry>
+      <title>Oracle全局搜索敏感词</title>
+      <link href="/Oracle%E5%85%A8%E5%B1%80%E6%90%9C%E7%B4%A2%E6%95%8F%E6%84%9F%E8%AF%8D.html"/>
+      <url>/Oracle%E5%85%A8%E5%B1%80%E6%90%9C%E7%B4%A2%E6%95%8F%E6%84%9F%E8%AF%8D.html</url>
+      
+        <content type="html"><![CDATA[<p>在Oracle全部表中搜索特定的敏感词 。</p><a id="more"></a><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line">  v_sql VARCHAR2(<span class="number">4000</span>);</span><br><span class="line">  v_tb_column VARCHAR2(4000);</span><br><span class="line">  v_cnt NUMBER(18,0);</span><br><span class="line">  cursor cur is <span class="keyword">SELECT</span> <span class="string">'SELECT '''</span>||<span class="string">'"'</span>||t1.table_name||<span class="string">'"."'</span>||t1.Column_Name||<span class="string">'"'</span>||<span class="string">''''</span>||<span class="string">' as col_name, NVL(COUNT(t."'</span>||t1.Column_Name||<span class="string">'"),0) as cnt FROM "'</span>||</span><br><span class="line">         t1.table_name||<span class="string">'" t WHERE t."'</span>||t1.column_name||<span class="string">'" like ''%敏感词%'''</span> <span class="keyword">AS</span> <span class="keyword">str</span></span><br><span class="line">    <span class="keyword">FROM</span> cols t1 <span class="keyword">left</span> <span class="keyword">join</span> user_col_comments t2</span><br><span class="line">      <span class="keyword">on</span> t1.Table_name=t2.Table_name <span class="keyword">and</span> t1.Column_Name=t2.Column_Name</span><br><span class="line">    <span class="keyword">left</span> <span class="keyword">join</span> user_tab_comments t3 </span><br><span class="line">      <span class="keyword">on</span> t1.Table_name=t3.Table_name </span><br><span class="line">   <span class="keyword">WHERE</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> ( <span class="keyword">SELECT</span> t4.Object_Name <span class="keyword">FROM</span> User_objects t4</span><br><span class="line">               <span class="keyword">WHERE</span> t4.Object_Type=<span class="string">'TABLE'</span> </span><br><span class="line">                 <span class="keyword">AND</span> t4.Temporary=<span class="string">'Y'</span> </span><br><span class="line">                 <span class="keyword">AND</span> t4.Object_Name=t1.Table_Name )</span><br><span class="line">     <span class="keyword">AND</span> (t1.Data_Type=<span class="string">'CHAR'</span> <span class="keyword">or</span> t1.Data_Type=<span class="string">'VARCHAR2'</span> <span class="keyword">or</span> t1.Data_Type=<span class="string">'VARCHAR'</span>)</span><br><span class="line">   <span class="keyword">ORDER</span> <span class="keyword">BY</span> t1.Table_Name, t1.Column_ID;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">  <span class="keyword">FOR</span> i <span class="keyword">IN</span> cur <span class="keyword">LOOP</span></span><br><span class="line">    v_sql := i.str; <span class="comment">-- 获取将要执行的SQL语句；</span></span><br><span class="line">    <span class="keyword">EXECUTE</span> <span class="keyword">IMMEDIATE</span> v_sql <span class="keyword">INTO</span> v_tb_COLUMN, v_cnt;</span><br><span class="line">    IF v_cnt &gt; 0 THEN</span><br><span class="line">      dbms_output.put_line('表：'||substr(v_tb_column,1,instr(v_tb_column,'.',1,1)-1)||' 列：'||substr(v_tb_column,instr(v_tb_column,'.',1,1)+1)||</span><br><span class="line">                           '有 '||to_char(v_cnt)|| '条记录含有字串"敏感词" ');</span><br><span class="line">    <span class="keyword">END</span> <span class="keyword">IF</span>;</span><br><span class="line">  <span class="keyword">END</span> <span class="keyword">LOOP</span>;</span><br><span class="line">EXCEPTION WHEN OTHERS THEN</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">  dbms_output.put_line(v_sql);</span><br><span class="line">  dbms_output.put_line(v_tb_column);</span><br><span class="line"><span class="keyword">END</span>;</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库总结 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>在服务器下搭建测试环境</title>
       <link href="/%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BA%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83.html"/>
       <url>/%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BA%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83.html</url>
@@ -357,9 +380,9 @@
       
         <tags>
             
-            <tag> JDK </tag>
-            
             <tag> Oracle </tag>
+            
+            <tag> JDK </tag>
             
             <tag> PL/SQL </tag>
             
