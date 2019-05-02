@@ -518,8 +518,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/《We-Are-Not-Ourselves》.html" rel="next" title="《We Are Not Ourselves》">
-                <i class="fa fa-chevron-left"></i> 《We Are Not Ourselves》
+              <a href="/新增上传附件的功能.html" rel="next" title="新增上传附件的功能">
+                <i class="fa fa-chevron-left"></i> 新增上传附件的功能
               </a>
             
           </div>
@@ -528,8 +528,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/新增上传附件的功能.html" rel="prev" title="新增上传附件的功能">
-                新增上传附件的功能 <i class="fa fa-chevron-right"></i>
+              <a href="/在页面添加一个文本域.html" rel="prev" title="在页面添加一个文本域">
+                在页面添加一个文本域 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -588,8 +588,7 @@ var jiathis_config={
   
     <div class="comments" id="comments">
       
-        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
-        <div id="gitment-container" style="display:none"></div>
+        <div id="gitment-container"></div>
       
     </div>
 
@@ -914,6 +913,11 @@ var jiathis_config={
 <!-- END LOCAL -->
 
     
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
 
     
       <script type="text/javascript">
@@ -936,11 +940,7 @@ var jiathis_config={
       }
 
       
-      function showGitment(){
-        document.getElementById("gitment-display-button").style.display = "none";
-        document.getElementById("gitment-container").style.display = "block";
-        renderGitment();
-      }
+      renderGitment();
       
       </script>
     
