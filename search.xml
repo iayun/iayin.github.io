@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title>tomcat修改内存配置</title>
+      <link href="/tomcat%E4%BF%AE%E6%94%B9%E5%86%85%E5%AD%98%E9%85%8D%E7%BD%AE.html"/>
+      <url>/tomcat%E4%BF%AE%E6%94%B9%E5%86%85%E5%AD%98%E9%85%8D%E7%BD%AE.html</url>
+      
+        <content type="html"><![CDATA[<p>程序在运行中占用内存大于最大值会抛出异常，通过配置程序允许占用的最大内存可解决。</p><a id="more"></a><h4 id="linux-下调整tomcat的内存设置"><a href="#linux-下调整tomcat的内存设置" class="headerlink" title="linux 下调整tomcat的内存设置"></a>linux 下调整tomcat的内存设置</h4><p>修改bin目录下catalina.sh文件<br>在cygwin=false之上<br>添加以下语句</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JAVA_OPTS="-Xms1024m -Xmx4096m -Xss1024K -XX:PermSize=512m -XX:MaxPermSize=2048m"</span><br></pre></td></tr></table></figure><p>其中-xms为jvm初始化堆的大小，-xmx为jvm堆的最大值</p><h4 id="window-下调整tomcat的内存设置"><a href="#window-下调整tomcat的内存设置" class="headerlink" title="window 下调整tomcat的内存设置"></a>window 下调整tomcat的内存设置</h4><p>修改bin目录下catalina.bat文件@echo off下追加</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set JAVA_OPTS=-XX:PermSize=64M -XX:MaxPermSize=128m -Xms512m -Xmx1024m</span><br></pre></td></tr></table></figure><h4 id="eclipse下修改外置tomcat的内存设置"><a href="#eclipse下修改外置tomcat的内存设置" class="headerlink" title="eclipse下修改外置tomcat的内存设置"></a>eclipse下修改外置tomcat的内存设置</h4><p>open launch configuration=&gt;arguments=&gt;vm arguments</p><p>追加</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-Xms1024M -Xmx4096M -XX:PermSize=512m -XX:MaxPermSize=2048m</span><br></pre></td></tr></table></figure><h4 id="java-lang-OutOfMemoryError错误分析"><a href="#java-lang-OutOfMemoryError错误分析" class="headerlink" title="java.lang.OutOfMemoryError错误分析"></a>java.lang.OutOfMemoryError错误分析</h4><p>java.lang.OutOfMemoryError 这个错误我相信大部分开发人员都有遇到过，产生该错误的原因大都出于以下原因：JVM内存过小、程序不严密，产生了过多的垃圾。</p><p>导致OutOfMemoryError异常的常见原因有以下几种：</p><ol><li>内存中加载的数据量过于庞大，如一次从数据库取出过多数据；</li><li>集合类中有对对象的引用，使用完后未清空，使得JVM不能回收；</li><li>代码中存在死循环或循环产生过多重复的对象实体；</li><li>使用的第三方软件中的BUG；</li><li>启动参数内存值设定的过小；</li></ol><p>此错误常见的错误提示：</p><ol><li>tomcat:java.lang.OutOfMemoryError: PermGen space</li><li>tomcat:java.lang.OutOfMemoryError: Java heap space</li><li>weblogic:Root cause of ServletException  java.lang.OutOfMemoryError</li><li>resin:java.lang.OutOfMemoryError</li><li>java:java.lang.OutOfMemoryError</li></ol><h4 id="java-lang-OutOfMemoryError的解决方法有如下几种："><a href="#java-lang-OutOfMemoryError的解决方法有如下几种：" class="headerlink" title="java.lang.OutOfMemoryError的解决方法有如下几种："></a>java.lang.OutOfMemoryError的解决方法有如下几种：</h4><p>增加jvm的内存大小。</p><p>方法有： </p><ol><li><p>在执行某个class文件时候，可以使用java -Xmx256M A.class来设置运行A.class时jvm所允许占用的最大内存为256M。</p></li><li><p>对tomcat容器，可以在启动时对jvm设置内存限度。对tomcat，可以在catalina.bat中添加：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set CATALINA_OPTS=-Xms128M -Xmx256M</span><br><span class="line">set JAVA_OPTS=-Xms128M -Xmx256M</span><br></pre></td></tr></table></figure><p>或者把%CATALINA_OPTS%和%JAVA_OPTS%代替为-Xms128M -Xmx256M</p></li><li><p>对resin容器，同样可以在启动时对jvm设置内存限度。在bin文件夹下创建一个startup.bat文件，内容如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">call &quot;httpd.exe&quot;  &quot;-Xms128M&quot; &quot;-Xmx256M&quot;</span><br><span class="line">:end</span><br></pre></td></tr></table></figure><p>其中”-Xms128M”为最小内存，”-Xmx256M”为最大内存。</p></li></ol><h5 id="优化程序，释放垃圾。"><a href="#优化程序，释放垃圾。" class="headerlink" title="优化程序，释放垃圾。"></a>优化程序，释放垃圾。</h5><p>主要包括避免死循环，应该及时释放种资源：内存, 数据库的各种连接，防止一次载入太多的数据。导致java.lang.OutOfMemoryError 的根本原因是程序不健壮。因此，从根本上解决Java内存溢出的唯一方法就是修改程序，及时地释放没用的对象，释放内存空间。 遇到该错误的时候要仔细检查程序，多遇一次这种问题之后，以后写程序就会小心多了。</p><h4 id="Java代码导致OutOfMemoryError错误的解决："><a href="#Java代码导致OutOfMemoryError错误的解决：" class="headerlink" title="Java代码导致OutOfMemoryError错误的解决："></a>Java代码导致OutOfMemoryError错误的解决：</h4><p>需要重点排查以下几点：</p><ol><li>检查代码中是否有死循环或递归调用。</li><li>检查是否有大循环重复产生新对象实体。</li><li>检查对数据库查询中，是否有一次获得全部数据的查询。一般来说，如果一次取十万条记录到内存，就可能引起内存溢出。这个问题比较隐蔽，在上线前，数据库中数据较少，不容易出问题，上线后，数据库中数据多了，一次查询就有可能引起内存溢出。因此对于数据库查询尽量采用分页的方式查询。</li><li>检查List、MAP等集合对象是否有使用完后，未清除的问题。List、MAP等集合对象会始终存有对对象的引用，使得这些对象不能被GC回收。</li></ol><h4 id="tomcat中java-lang-OutOfMemoryError-PermGen-space异常处理"><a href="#tomcat中java-lang-OutOfMemoryError-PermGen-space异常处理" class="headerlink" title="tomcat中java.lang.OutOfMemoryError: PermGen space异常处理"></a>tomcat中java.lang.OutOfMemoryError: PermGen space异常处理</h4><p><strong>PermGen space</strong>的全称是Permanent Generation space,是指内存的永久保存区域,这块内存主要是被JVM存放Class和Meta信息的,Class在被Loader时就会被放到PermGen space中, 它和存放类实例(Instance)的Heap区域不同,GC(Garbage Collection)不会在主程序运行期对PermGen space进行清理，所以如果你的应用中有很多CLASS的话,就很可能出现PermGen space错误, 这种错误常见在web服务器对JSP进行pre compile的时候。如果你的WEB APP下都用了大量的第三方jar, 其大小超过了jvm默认的大小(4M)那么就会产生此错误信息了。 解决方法： 手动设置MaxPermSize大小修改TOMCAT_HOME/bin/catalina.sh在</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo "Using CATALINA_BASE:   $CATALINA_BASE"</span><br></pre></td></tr></table></figure><p>上面加入以下行：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JAVA_OPTS="-server -XX:PermSize=64M -XX:MaxPermSize=128m</span><br></pre></td></tr></table></figure><p>建议：将相同的第三方jar文件移置到tomcat/shared/lib目录下，这样可以达到减少jar 文档重复占用内存的目的。</p><h4 id="weblogic中java-lang-OutOfMemoryError异常处理"><a href="#weblogic中java-lang-OutOfMemoryError异常处理" class="headerlink" title="weblogic中java.lang.OutOfMemoryError异常处理"></a>weblogic中java.lang.OutOfMemoryError异常处理</h4><p>错误提示： <code>Root cause of ervletException java.lang.OutOfMemoryError</code> 解决办法：调整bea/weblogic/common中CommEnv中参数</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">:sun</span><br><span class="line">　　if "%PRODUCTION_MODE%" == "true" goto sun_prod_mode</span><br><span class="line">　　set JAVA_VM=-client</span><br><span class="line">　　set MEM_ARGS=-Xms256m -Xmx512m -XX:MaxPermSize=256m</span><br><span class="line">　　set JAVA_OPTIONS=%JAVA_OPTIONS% -Xverify:none</span><br><span class="line">　　goto continue</span><br><span class="line">　　:sun_prod_mode</span><br><span class="line">　　set JAVA_VM=-server</span><br><span class="line">　　set MEM_ARGS=-Xms256m -Xmx512m -XX:MaxPermSize=256m</span><br><span class="line">　　goto continue</span><br></pre></td></tr></table></figure><h4 id="Resin下java-lang-OutOfMemoryError异常处理"><a href="#Resin下java-lang-OutOfMemoryError异常处理" class="headerlink" title="Resin下java.lang.OutOfMemoryError异常处理"></a>Resin下java.lang.OutOfMemoryError异常处理</h4><p>产生内存溢出的原因：</p><p>出现这个错误，一般是因为JVM物理内存过小。默认的Java虚拟机最大内存仅为64兆，这在开发调试过程中可能没有问题，但在实际的应用环境中是远远不能满足需要的，除非你的应用非常小，也没什么访问量。否则你可能会发现程序运行一段时间后包java.lang.OutOfMemoryError的错误。因此我们需要提升resin可用的虚拟机内存的大小。</p><p>解决方法：</p><p>修改/usr/local/resin/bin/httpd.sh中的args选项 添加参数<code>-Xms</code>（初始内存）和<code>-Xmx</code>（最大能够使用内存大小）可以用来限制JVM的物理内存使用量。例如：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">args="-Xms128m -Xmx256m"</span><br></pre></td></tr></table></figure><p>设置后，JVM初始物理内存是128m，最大能使用物理内存为256m。</p><p>这两个值应该由系统管理员根据服务器的实际情况进行设置</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java总结 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> tomcat </tag>
+            
+            <tag> jvm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>MySQL乱码</title>
       <link href="/MySQL%E4%B9%B1%E7%A0%81.html"/>
       <url>/MySQL%E4%B9%B1%E7%A0%81.html</url>
@@ -558,9 +583,9 @@
       
         <tags>
             
-            <tag> Oracle </tag>
-            
             <tag> JDK </tag>
+            
+            <tag> Oracle </tag>
             
             <tag> PL/SQL </tag>
             
