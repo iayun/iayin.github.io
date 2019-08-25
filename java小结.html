@@ -98,7 +98,7 @@
 <meta property="og:site_name" content="花不见归">
 <meta property="og:description" content="在开发过程中遇到的各种bug。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-11T04:22:05.881Z">
+<meta property="og:updated_time" content="2019-08-25T06:01:04.398Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java小结">
 <meta name="twitter:description" content="在开发过程中遇到的各种bug。">
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  110
+                  533
                 </span>
               
 
@@ -423,7 +423,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -452,7 +452,14 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> DecimalFormat(<span class="string">"#0.0000"</span>).format(map.get(<span class="string">"percent"</span>));--指定保留四位小数</span><br></pre></td></tr></table></figure>
 <h4 id="在求概率问题时，两个long型相除误差大"><a href="#在求概率问题时，两个long型相除误差大" class="headerlink" title="在求概率问题时，两个long型相除误差大"></a>在求概率问题时，两个long型相除误差大</h4><p>解决方法</p>
 <p>先将long型转为double型，再进行运算，将结果赋予double型。</p>
-
+<h4 id="前台传数组，后端接受"><a href="#前台传数组，后端接受" class="headerlink" title="前台传数组，后端接受"></a>前台传数组，后端接受</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public void excel(HttpServletResponse response, HttpServletRequest request, </span><br><span class="line">                         String[] headers, String[] fields) throws Exception &#123;</span><br><span class="line"></span><br><span class="line">    String[] bureauArr = request.getParameterValues(&quot;bureau[]&quot;);</span><br><span class="line">    String[] lineNameArr = request.getParameterValues(&quot;lineName[]&quot;);</span><br><span class="line">    String[] headers;</span><br></pre></td></tr></table></figure>
+<p>两种方式：</p>
+<p>一、传参时用String[]</p>
+<p>二、使用request.getParameterValues(“lineName[]”) 接受,参数后边要加[].</p>
+<h4 id="手动分页"><a href="#手动分页" class="headerlink" title="手动分页"></a>手动分页</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//分页</span><br><span class="line">List&lt;BizIceInfo&gt; bizRtmIceInfoPage = new ArrayList&lt;BizIceInfo&gt;();</span><br><span class="line">int page,rows;</span><br><span class="line">int total = bizRtmIceInfoPage.size();</span><br><span class="line">List&lt;BizIceInfo&gt; pageList = new ArrayList&lt;&gt;();</span><br><span class="line">//数量与页数的关系</span><br><span class="line">if( total - page*rows &gt; 0 )&#123;</span><br><span class="line">    for (int i = 0; i &lt; rows; i++) &#123;</span><br><span class="line">        pageList.add(bizRtmIceInfoPage.get(rows * (page - 1) + i));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    for (int i = 0; i &lt; total - rows*(page-1) ; i++) &#123;</span><br><span class="line">        pageList.add(bizRtmIceInfoPage.get(rows * (page - 1) + i));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="字符串替换分割与去重"><a href="#字符串替换分割与去重" class="headerlink" title="字符串替换分割与去重"></a>字符串替换分割与去重</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//取字符串中的数字</span><br><span class="line">String[] NumberArr = &quot;1好2huai3#&quot;.replaceAll(&quot;\\D&quot;, &quot;_&quot;).replace(&quot;_+&quot;, &quot;_&quot;)).split(&quot;_+&quot;);</span><br><span class="line">//去重</span><br><span class="line">List&lt;String&gt; Number = (Arrays.asList(NumberArr)).stream().filter(string -&gt; !string.isEmpty()).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+<h4 id="List中对象的某个属性排序"><a href="#List中对象的某个属性排序" class="headerlink" title="List中对象的某个属性排序"></a>List中对象的某个属性排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">private void CompareBiz(String sidx, String sord, List&lt;BizIceInfo&gt; bizRtmIceInfoPage) &#123;</span><br><span class="line">    //升序</span><br><span class="line">    if(sord.equals(&quot;asc&quot;))&#123;</span><br><span class="line">        if(&quot;company&quot;.equals(sidx))&#123;</span><br><span class="line">            bizRtmIceInfoPage.sort(Comparator.comparing(BizIceInfo::getCompany));</span><br><span class="line">        &#125;else if(&quot;iceHeight&quot;.equals(sidx))&#123;</span><br><span class="line">            bizRtmIceInfoPage.sort(Comparator.comparingDouble(BizIceInfo::getIceHeight));</span><br><span class="line">        &#125;else if(&quot;iceHeightR&quot;.equals(sidx))&#123;</span><br><span class="line">            bizRtmIceInfoPage.sort(Comparator.comparingDouble(BizIceInfo::getIceHeightR));</span><br><span class="line">        &#125;else if(&quot;mark&quot;.equals(sidx))&#123;</span><br><span class="line">            bizRtmIceInfoPage.sort(Comparator.comparing(BizIceInfo::getMark));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;else&#123;//降序</span><br><span class="line">        if(&quot;company&quot;.equals(sidx))&#123;</span><br><span class="line">            bizRtmIceInfoPage.sort(Comparator.comparing(BizIceInfo::getBsid).reversed());</span><br><span class="line">        &#125;else if(&quot;heightThan&quot;.equals(sidx))&#123;</span><br><span class="line">            bizRtmIceInfoPage.sort(Comparator.comparingDouble(BizIceInfo::getHeightThan).reversed());</span><br><span class="line">        &#125;else if(&quot;mark&quot;.equals(sidx))&#123;</span><br><span class="line">            bizRtmIceInfoPage.sort(Comparator.comparing(BizIceInfo::getMark).reversed());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="数组-List-Set-互相转化"><a href="#数组-List-Set-互相转化" class="headerlink" title="数组 List Set 互相转化"></a>数组 List Set 互相转化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">//数组转List</span><br><span class="line">List list = Arrays.asList(arr);</span><br><span class="line"></span><br><span class="line">//数组转Set</span><br><span class="line">Set&lt;String&gt; set = new HashSet&lt;&gt;(Arrays.asList(arr));</span><br><span class="line"></span><br><span class="line">//List转数组</span><br><span class="line">Object[] arr = list.toArray();</span><br><span class="line"></span><br><span class="line">//List转Set</span><br><span class="line">Set result = new HashSet(list);</span><br><span class="line"></span><br><span class="line">//Set转数组</span><br><span class="line">Object[] arr = set.toArray();</span><br><span class="line"></span><br><span class="line">//Set转List</span><br><span class="line">List&lt;String&gt; list = new ArrayList&lt;&gt;(set);</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -519,8 +526,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/mybatis中两种特殊符号.html" rel="next" title="mybatis中两种特殊符号">
-                <i class="fa fa-chevron-left"></i> mybatis中两种特殊符号
+              <a href="/Sql小结.html" rel="next" title="Sql小结">
+                <i class="fa fa-chevron-left"></i> Sql小结
               </a>
             
           </div>
@@ -721,7 +728,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#BigDecimal转json时候会丢失精度问题"><span class="nav-number">1.</span> <span class="nav-text">BigDecimal转json时候会丢失精度问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在求概率问题时，两个long型相除误差大"><span class="nav-number">2.</span> <span class="nav-text">在求概率问题时，两个long型相除误差大</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#BigDecimal转json时候会丢失精度问题"><span class="nav-number">1.</span> <span class="nav-text">BigDecimal转json时候会丢失精度问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在求概率问题时，两个long型相除误差大"><span class="nav-number">2.</span> <span class="nav-text">在求概率问题时，两个long型相除误差大</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#前台传数组，后端接受"><span class="nav-number">3.</span> <span class="nav-text">前台传数组，后端接受</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#手动分页"><span class="nav-number">4.</span> <span class="nav-text">手动分页</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串替换分割与去重"><span class="nav-number"></span> <span class="nav-text">字符串替换分割与去重</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#List中对象的某个属性排序"><span class="nav-number">1.</span> <span class="nav-text">List中对象的某个属性排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组-List-Set-互相转化"><span class="nav-number">2.</span> <span class="nav-text">数组 List Set 互相转化</span></a></li></ol></div>
             
 
           </div>
@@ -756,7 +763,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">32.8k</span>
+    <span title="Site words total count">33.6k</span>
   
 </div>
 
